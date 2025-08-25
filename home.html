@@ -3,10 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Payoo Mobile Financial Services App</title>
+    <link rel="icon" type="image/png" href="./payoo.png">
+    <!-- daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-<body>
-    <h1>Home</h1>
-    
+<body class="bg-[#f4f5f7] h-[100vh]">
+    <div class="max-w-lg mx-auto bg-white rounded-b-xl">
+        <nav>
+            <div class="border-b-1 border-gray-400 min-h-[50px] flex justify-between items-center p-4">
+                <div class="flex justify-between items-center gap-2">
+                    <img src="./assets/group.png" alt="" class="h-[50px]">
+                    <div>
+                        <h2 class="font-bold">$45000</h2>
+                        <p class="text-[#08080880]">Available Balance</p>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn"><i class="fa-solid fa-arrow-right-from-bracket rotate-180"></i>Log Out</button>
+                </div>
+            </div>
+        </nav>
+        <!-- welcome -->
+        <div class="mt-8 p-4">
+            <h1 class="text-2xl font-bold">🔥 Welcome to Payoo!</h1>
+            <p class="text-[#08080880] mt-3">Enjoy easy and convenient financial services with us.<br/> Cashout charge is low.</p>
+        </div>
+        <!-- cards -->
+        <div class="min-h-[200px] grid grid-cols-3 gap-4 p-4">
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/wallet.png" alt="" class="mx-auto">
+                <h2>Add Money</h2>
+            </div>
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/cashout.png" alt="" class="mx-auto">
+                <h2>Cash Out</h2>
+            </div>
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/transfer.png" alt="" class="mx-auto">
+                <h2>Transfer Money</h2>
+            </div>
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/bonus.png" alt="" class="mx-auto">
+                <h2 class="mt-2">Get Bonus</h2>
+            </div>
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/bill.png" alt="" class="mx-auto">
+                <h2>Pay Bill</h2>
+            </div>
+            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+                <img src="./assets/transaction.png" alt="" class="mx-auto">
+                <h2>Transactions</h2>
+            </div>
+        </div>
+    </div>
+    <!-- form -->
+    <div class="all-form-section max-w-lg mx-auto">
+        <!-- add money -->
+         <div>
+            <h1>Add Money</h1>
+            <form action="">
+                <div>
+                    <h1>Select A Bank</h1>
+                    <select class="select focus:outline-none">
+                        <option disabled selected>Select bank</option>
+                        <option>Crimson</option>
+                        <option>Amber</option>
+                        <option>Velvet</option>
+                    </select>
+                </div>
+                <div>
+                    <h1>Bank Account Number</h1>
+                </div>
+                <div>
+                    <h1>Amount to Add</h1>
+                </div>
+                <div>
+                    <h1>Pin Number</h1>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="./js/scripts.js"></script>
 </body>
 </html>
