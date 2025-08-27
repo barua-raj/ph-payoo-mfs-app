@@ -18,7 +18,7 @@
                 <div class="flex justify-between items-center gap-2">
                     <img src="./assets/group.png" alt="" class="h-[50px]">
                     <div>
-                        <h2 class="font-bold">$45000</h2>
+                        <h2 id="avail" class="font-bold">$<span id="available-balance">45000</span></h2>
                         <p class="text-[#08080880]">Available Balance</p>
                     </div>
                 </div>
@@ -64,12 +64,12 @@
     <div class="all-form-section max-w-lg mx-auto">
         <!-- add money -->
          <div>
-            <h1 class="font-bold my-5">Add Money</h1>
-            <form action="" class="bg-white rounded-2xl p-8">
+            <h1 class="font-bold my-5 ml-3 text-xl">Add Money</h1>
+            <form action="" class="bg-white rounded-2xl pt-5 pr-8 pl-8">
                 <div class="">
                     <label class="font-semibold" for="">Select a bank</label>
                     <br/>
-                    <select class="select focus:outline-none bg-[#f4f5f7] mt-3 rounded-3xl w-full">
+                    <select id="bank" class="select focus:outline-none bg-[#f4f5f7] mt-3 rounded-3xl w-full">
                         <option>Select bank</option>
                         <option>Standard Chartered Bank</option>
                         <option>DBBL</option>
@@ -80,23 +80,23 @@
                 <div class="mt-2">
                     <label class="font-semibold" for="">Bank Account Number</label>
                     <br/>
-                    <input type="text" placeholder="Enter 11 digit account number" id="" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
+                    <input id="account-number" type="text" placeholder="Enter 11 digit account number" id="" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
                 </div>
                 <div class="mt-2">
                     <label class="font-semibold" for="">Amount to Add</label>
                     <br/>
-                    <input type="text" placeholder="Add Amount to withdraw" id="" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
+                    <input id="add-amount" type="text" placeholder="Add Amount to withdraw" id="" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
                 </div>
                 <div class="mt-2">
                     <label class="font-semibold" for="">Pin Number</label>
                     <br/>
-                    <input type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
+                    <input id="add-pin" type="text" placeholder="Enter 4 digit pin number" class="input bg-[#f4f5f7] rounded-3xl focus:outline-none w-full mt-2" />
                 </div>
                 <button id="btn-add-money" class="btn bg-[#0874f2] text-white text-lg p-6 w-full rounded-3xl font-bold mt-8">Add Money</button>
             </form>
         </div>
     </div>
 
-    <script src="./js/scripts.js"></script>
+    <script src="./js/home.js"></script>
 </body>
 </html>
