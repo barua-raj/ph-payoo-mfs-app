@@ -22,6 +22,28 @@ function setInnerText(value){
     const totalNewAvailableElement =  document.getElementById('available-balance');
     totalNewAvailableElement.innerText = value;
 }
+// reusable function to handle toggle
+function handleToggle(id){
+    const forms = document.getElementsByClassName('form');
+    
+    for (const form of forms) {
+        form.style.display = "none";
+    }
+    document.getElementById(id).style.display = "block";
+}
+// reusable function to toggle background
+function handleButtonToggle(id){
+    const formBtns = document.getElementsByClassName('btn-form');
+    for (const btn of formBtns){
+        btn.classList.remove("border-[#0874f2]", "bg-[#0874f20d]");
+        btn.classList.add("border-gray-300"); 
+    }
+    document.getElementById(id).classList.remove("border-gray-300");
+    document.getElementById(id).classList.add("border-[#0874f2]", "bg-[#0874f20d]");
+}
+
+
+
 // add money feature
 document.getElementById('btn-add-money').addEventListener('click', function(e){
     e.preventDefault();
@@ -73,10 +95,37 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
 })
 // toggle feature
 document.getElementById('add-money-btn').addEventListener('click', function(){
-    document.getElementById('cash-out-parent').style.display = "none";
-    document.getElementById('add-money-parent').style.display = "block";
+   
+    handleToggle('add-money-parent');
+    handleButtonToggle('add-money-btn');
+
 })
 document.getElementById('cash-out-btn').addEventListener('click', function(){
-    document.getElementById('add-money-parent').style.display = "none";
-    document.getElementById('cash-out-parent').style.display = "block";
+    
+    handleToggle('cash-out-parent');
+    handleButtonToggle('cash-out-btn');
+
+})
+document.getElementById('btn-transfer').addEventListener('click', function(){
+    handleToggle('transfer-money-parent');
+    handleButtonToggle('btn-transfer');
+})
+// get-bonus-parent
+document.getElementById('btn-bonus').addEventListener('click', function(){
+
+    handleToggle('get-bonus-parent');
+    handleButtonToggle('btn-bonus');
+})
+// pay-bill-parent
+document.getElementById('btn-pay-bill').addEventListener('click', function(){
+
+    handleToggle('pay-bill-parent');
+    handleButtonToggle('btn-pay-bill');
+
+})
+// transfer-money-parent
+document.getElementById('btn-transactions').addEventListener('click', function(){
+
+    handleToggle('transactions-money-parent');
+    handleButtonToggle('btn-transactions');
 })

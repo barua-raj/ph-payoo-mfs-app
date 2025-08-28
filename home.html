@@ -34,27 +34,27 @@
         </div>
         <!-- cards -->
         <div class="min-h-[200px] grid grid-cols-3 gap-4 p-4">
-            <div id="add-money-btn" class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="add-money-btn" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/wallet.png" alt="" class="mx-auto">
                 <h2>Add Money</h2>
             </div>
-            <div id="cash-out-btn" class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="cash-out-btn" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/cashout.png" alt="" class="mx-auto">
                 <h2>Cash Out</h2>
             </div>
-            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="btn-transfer" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/transfer.png" alt="" class="mx-auto">
                 <h2>Transfer Money</h2>
             </div>
-            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="btn-bonus" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/bonus.png" alt="" class="mx-auto">
                 <h2 class="mt-2">Get Bonus</h2>
             </div>
-            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="btn-pay-bill" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/bill.png" alt="" class="mx-auto">
                 <h2>Pay Bill</h2>
             </div>
-            <div class="text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
+            <div id="btn-transactions" class="btn-form text-center p-3 rounded-xl flex flex-col items-center justify-center border-1 border-gray-300">
                 <img src="./assets/transaction.png" alt="" class="mx-auto">
                 <h2>Transactions</h2>
             </div>
@@ -63,7 +63,7 @@
     <!-- form -->
     <div class="all-form-section max-w-lg mx-auto">
         <!-- add money -->
-        <div id="add-money-parent">
+        <div class="form" id="add-money-parent">
             <h1 class="font-bold my-5 ml-3 text-xl">Add Money</h1>
             <form action="" class="bg-white rounded-2xl pt-5 pr-8 pl-8">
                 <div class="">
@@ -96,7 +96,7 @@
             </form>
         </div>
 
-        <div id="cash-out-parent" style="display: none;">
+        <div class="form" id="cash-out-parent" style="display: none;">
             <h1 class="font-bold my-5 ml-3 text-xl">Cash Out</h1>
             <form action="" class="bg-white rounded-2xl pt-5 pr-8 pl-8">
                 <div class="mt-2">
@@ -116,6 +116,18 @@
                 </div>
                 <button id="btn-withdraw" class="btn bg-[#0874f2] text-white text-lg p-6 w-full rounded-3xl font-bold mt-8">Withdraw Money</button>
             </form>
+        </div>
+        <div class="form" id="transfer-money-parent" style="display: none;">
+            <h1 class="font-bold my-5 ml-3 text-xl">Transfer Money</h1>
+        </div>
+        <div class="form" id="get-bonus-parent" style="display: none;">
+            <h1 class="font-bold my-5 ml-3 text-xl">Get Bonus</h1>
+        </div>
+        <div class="form" id="pay-bill-parent" style="display: none;">
+            <h1 class="font-bold my-5 ml-3 text-xl">Pay Bill</h1>
+        </div>
+        <div class="form" id="transactions-money-parent" style="display: none;">
+            <h1 class="font-bold my-5 ml-3 text-xl">Transactions</h1>
         </div>
     </div>
 
