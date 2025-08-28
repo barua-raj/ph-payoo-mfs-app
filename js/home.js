@@ -1,5 +1,6 @@
 const bankAccountNumber = 12345678912;
 const validPin = 1234;
+const transactionData = [];
 // reusable function to get input values
 function getInputValueNumber(id) {
 
@@ -72,6 +73,13 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
 
     const totalNewAvailableBalance = availableAmount + addAmount;
     setInnerText(totalNewAvailableBalance);
+
+    const data = {
+        name: "Add Money",
+        date: new Date().toLocaleTimeString()
+    }
+    transactionData.push(data);
+    console.log(transactionData);
 })
 // cash out money
     document.getElementById('btn-withdraw').addEventListener('click', function(e){
@@ -92,6 +100,39 @@ document.getElementById('btn-add-money').addEventListener('click', function(e){
     // }
     const totalNewAvailableBalance = availableAmount - amountWithdraw;
     setInnerText(totalNewAvailableBalance);
+
+    const data = {
+        name: "Cash Out",
+        date: new Date().toLocaleTimeString()
+    }
+    transactionData.push(data);
+    console.log(transactionData);
+    
+})
+// transactions
+document.getElementById('btn-transactions').addEventListener('click', function(){
+    const trasactionContainer = document.getElementById('transaction-container');
+    trasactionContainer.innerHTML = "";
+
+    for (const data of transactionData) {
+        const div = document.createElement('div');
+        div.innerHTML=`
+            <div class="bg-white rounded-xl p-3 flex justify-between items-center mt-3">
+                    <div class="flex items-center">
+                        <div class="bg-[#f4f5f7] p-3 rounded-full">
+                            <img src="./assets/wallet.png" class="mx-auto" alt="">
+                        </div>
+                        <div class="ml-3">
+                            <h1>${data.name}</h1>
+                            <p>${data.date}<p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </div>
+        `
+        trasactionContainer.appendChild(div);
+    }
+    
 })
 // toggle feature
 document.getElementById('add-money-btn').addEventListener('click', function(){
